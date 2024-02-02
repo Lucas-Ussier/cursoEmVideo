@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <style>
+        body{
+            background-color: grey;
+            color : rgb(155, 248, 131);
+            font: normal 22pt Comic;
+            margin-left: 25px;
+        }
+        h1{
+            color: rgb(18, 87, 29);
+            text-align: center;
+        }
+        p{
+            font: bolder 17pt Arial;
+        }
+        p#res{
+            margin-top: 25px;
+            margin-bottom: 45px;
+            text-align: center;
+        }
+        input{
+            background-color: lightgrey;
+            text-align: center;
+            height: 30px;
+            max-width: 100px;
+            font: bolder;
+        }
+        input#button{
+            background-color: lightgrey;
+            max-width: 350px;
+            width: 200px;
+            font: bolder;
+            margin-top: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Calculadora </h1>
+    <div>Para fazer as operações você deve selecionar no primeiro campo a operação desejada, 
+        sendo:</div>
+        <p id="ops"> 1 - Adição<br> 2 - Subtração<br> 3 - Multiplicação<br>  4 - Divisão</p>
+        
+    <input type="number" 
+            name="selector"
+            id="selector"
+            max="4" min="1"
+            value="1">
+
+    <input type="number" 
+            name="n1"
+            id="n1">
+
+    <input type="number" 
+            name="n2"
+            id="n2">
+
+            
+    <div></div>
+
+    <input type="button"
+            id = "button"
+            value="Calcular" 
+            onclick="clicar()" 
+            onmouseenter="mouseEnter()">
+
+    <p id ="res"> Resultado </p>
+    <div>Caso seja um número inválido a operação não será realizada</div>
+
+    <script>
+        var bool = true
+     
+       function clicar(){
+        var numText1 = document.querySelector('input#n1')
+        var numText2 = document.querySelector('input#n2')
+        var selector = Number.parseInt(document.querySelector('input#selector').value)
+        var res = document.querySelector('p#res')
+        var num1 = Number.parseFloat(numText1.value)
+        var num2 = Number.parseFloat(numText2.value)
+        var s
+
+        if(isNaN(num1)){
+            num1 = 0
+        }
+         if(isNaN(num2)){
+            num2 = 0
+         }
+
+        switch (selector) {
+            case 1:
+                s = num1 + num2
+                res.innerHTML = `A soma dos números ${num1} e ${num2} é: ${s}`
+                break;
+
+            case 2:
+                s = num1 - num2
+                res.innerHTML = `A subtração dos números ${num1} e ${num2} é: ${s}`
+                break;
+
+            case 3:
+                s = num1 * num2
+                res.innerHTML = `A multiplicação dos números ${num1} e ${num2} é: ${s}`
+                break;
+
+            case 4:
+                if(num2 != 0){
+                    s = num1 / num2
+                    res.innerHTML = `A divisão dos números ${num1} e ${num2} é: ${s}`
+                }else{
+                    window.alert("Impossível dividir por 0")
+                }
+                break;
+        
+            default:
+                window.alert("Número Inválido, por favor escolher um número entre 1 e 4")
+                break;
+        }
+
+        
+       }
+
+       function mouseEnter(){
+
+       
+       }
+
+       function mouseOut(){
+   
+       }
+
+        
+
+       
+
+    </script>
+
+</body>
+</html>
