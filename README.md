@@ -1,1 +1,1 @@
-<a href="https://lucas-ussier.github.io">Abrir a Caluladora
+<a href="https://lucas-ussier.github.io/cursoEmVideo/javascript/calculadora/calculadora.html">Abrir a Caluladora
