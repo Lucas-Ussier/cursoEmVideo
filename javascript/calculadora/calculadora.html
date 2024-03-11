@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Calculadora</h1>
+    </header>
+    <section>
+        
+        <div id="form">
+           <p>
+            Escolha uma operação a seguir:
+           </p>
+           <p> 
+            <input type="radio" name="op" id="som" checked> Adição
+            <input type="radio" name="op" id="sub"> Subtração
+            <input type="radio" name="op" id="mul"> Multiplicação
+            <input type="radio" name="op" id="div"> Divisão
+           </p>
+           <p> 
+            Digite os números:<br>
+            <input type="number" name="numb" id="num1txt">
+            <input type="number" name="numb" id="num2txt">
+            <input type="button" value="Calcular" onclick="calcular()">
+           </p>
+        </div>
+        <div id="out">
+            Aguardando números para a operação
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy Lucas Galvão</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
