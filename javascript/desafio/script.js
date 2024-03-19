@@ -4,7 +4,6 @@ function adicionar(){
     var sel = window.document.getElementById("numshow")
     var numtxt = window.document.getElementById("numtxt")
     var out = window.document.getElementById("out")
-   
 
     if(numtxt.value.length == 0){
         window.alert("[ERRO] Favor adicionar um número para continuar")
@@ -28,7 +27,6 @@ function adicionar(){
     }
     out.innerHTML = ''
     numtxt.value = ""
-    
 }
 
 function compararNumeros(a, b) {
@@ -38,8 +36,6 @@ function compararNumeros(a, b) {
 
 function finalizar(){
     var out = window.document.getElementById("out")
-    
-
     var soma = 0
 
     for (let index = 0; index < numbers.length; index++) {
@@ -54,4 +50,6 @@ function finalizar(){
         <p>Somando todos os valores, temos ${soma}. </p>
         <p>A média dos valores informados é ${soma/numbers.length}. </p>
     `
+    
+    numbers = []
 }
