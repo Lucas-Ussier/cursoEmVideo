@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframes</title>
+    <style>
+        iframe{
+            width: 90%;
+            height: 400px;
+        }
+    </style>
+
+
+</head>
+<body>
+    <h1>TESTE</h1>
+    <ul>
+        <li onclick="onClickLink()"><a href="../desafio-tabelas/desafio013.html" target="frame" onclick="onClickLink()">ex001</a></li>
+        <li><a href="/css/projeto-cordel/index.html" target="frame" onclick="onClickLink()">cordel</a></li>
+        <li><a href="/javascript/ex017/modelo.html" target="frame" onclick="onClickLink()">cordel</a></li>
+    </ul>
+
+    <div id="preview">
+
+    </div>
+   
+
+    <script>
+        function onClickLink(){
+            var tela = document.getElementById('preview');
+            tela.innerHTML = `<iframe id="preview" name="frame" frameborder="1"></iframe>`;
+        }
+    </script>
+</body>
+
+</html>
